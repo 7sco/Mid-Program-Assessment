@@ -46,9 +46,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String checkUser = "username" + username.getText().toString();
-                String checkPassword = "password" + username.getText().toString();
-
                 if (username.getText().toString().equalsIgnoreCase(login.getString("username", null))
                         && password.getText().toString().equals(login.getString("password", null))) {
 
@@ -74,16 +71,6 @@ public class LoginActivity extends AppCompatActivity {
                         Toast.makeText(getBaseContext(), "Please enter an email address!", Toast.LENGTH_LONG).show();
                     }
                 }
-
-
-
-//                if (username.getText().toString().equalsIgnoreCase(login.getString(checkUser, null))
-//                        && password.getText().toString().equals(login.getString(checkPassword, null))) {
-//
-//                    Intent intent= new Intent(LoginActivity.this, ListActivity.class);
-//                    intent.putExtra("email", username.getText().toString());
-//                    startActivity(intent);
-//                }
 
             }
 
